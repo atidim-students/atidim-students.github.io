@@ -292,7 +292,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--blue-deep) 0%, #1e40af 40%, var(--blue-royal) 100%);
+  background: linear-gradient(160deg, #0f2557 0%, var(--blue-deep) 30%, #1e40af 60%, var(--blue-royal) 100%);
   padding-top: var(--header-height);
   overflow: hidden;
 }
@@ -301,8 +301,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.3) 0%, transparent 50%);
+    radial-gradient(ellipse at 75% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 30%, rgba(96, 165, 250, 0.15) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -318,11 +318,12 @@ body {
   color: var(--white);
   margin-bottom: 1rem;
   line-height: 1.3;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-slogan {
   font-size: clamp(1.125rem, 3vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.5rem;
   font-weight: 300;
 }
@@ -330,7 +331,31 @@ body {
 .hero-cta {
   font-size: 1.125rem;
   padding: 1rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.4);
 }
+
+.hero-cta:hover {
+  box-shadow: 0 6px 30px rgba(194, 65, 12, 0.5);
+}
+
+/* ============================================
+   Scroll Animations
+   ============================================ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-up:nth-child(5) { transition-delay: 0.4s; }
 
 /* ============================================
    Section Titles
@@ -345,7 +370,7 @@ body {
 
 .section-subtitle {
   text-align: center;
-  color: #64748b;
+  color: #475569;
   font-size: 1.125rem;
   margin-bottom: 2rem;
 }
@@ -370,14 +395,29 @@ body {
    ============================================ */
 .about-section {
   background: var(--white);
+  position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") no-repeat bottom center;
+  background-size: 100% 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .about-text {
   max-width: 48rem;
   margin: 0 auto 1.25rem;
-  text-align: center;
+  text-align: start;
   color: #475569;
   font-size: 1.0625rem;
+  line-height: 1.8;
 }
 
 .about-text:last-of-type {
@@ -609,15 +649,23 @@ body {
 .finance-card {
   background: var(--white);
   border: 1px solid #e2e8f0;
+  border-top: 4px solid #e2e8f0;
   padding: 2rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .finance-card:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
+
+.finance-card:nth-child(1) { border-top-color: var(--blue-royal); }
+.finance-card:nth-child(2) { border-top-color: #16a34a; }
+.finance-card:nth-child(3) { border-top-color: var(--yellow-mustard); }
+.finance-card:nth-child(4) { border-top-color: var(--orange-cta); }
+.finance-card:nth-child(5) { border-top-color: #8b5cf6; }
 
 .finance-card-header {
   display: flex;
@@ -1043,6 +1091,10 @@ body {
   .contact-item {
     padding: 1rem 0.5rem;
   }
+
+  .contact-item:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ============================================
@@ -1059,5 +1111,10 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .fade-up {
+    opacity: 1;
+    transform: none;
   }
 }
