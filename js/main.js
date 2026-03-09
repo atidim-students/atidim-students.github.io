@@ -52,7 +52,7 @@
 // Active nav link highlighting on scroll
 // ============================================
 (function () {
-  var sections = document.querySelectorAll('section[id]');
+  var sections = document.querySelectorAll('section[id], footer[id]');
   var navLinks = document.querySelectorAll('.nav-link');
 
   function updateActiveLink() {
