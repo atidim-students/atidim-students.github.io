@@ -714,7 +714,7 @@ body {
 .timeline::before {
   content: '';
   position: absolute;
-  right: 1.1875rem;
+  right: calc(0.5rem + 1.25rem - 1.5px);
   top: 0;
   bottom: 0;
   width: 3px;
@@ -798,7 +798,7 @@ body {
   }
 
   .timeline::before {
-    right: 0.5625rem;
+    right: calc(0.25rem + 1rem - 1.5px);
   }
 
   .timeline-marker {
