@@ -708,13 +708,13 @@ body {
   position: relative;
   max-width: 48rem;
   margin: 0 auto;
-  padding-right: 3rem;
+  padding-right: 4rem;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  right: 0.875rem;
+  right: 1.1875rem;
   top: 0;
   bottom: 0;
   width: 3px;
@@ -733,7 +733,7 @@ body {
 
 .timeline-marker {
   position: absolute;
-  right: -3rem;
+  right: -3.5rem;
   top: 0.25rem;
   width: 2.5rem;
   height: 2.5rem;
@@ -794,15 +794,15 @@ body {
 
 @media (max-width: 600px) {
   .timeline {
-    padding-right: 2.5rem;
+    padding-right: 3rem;
   }
 
   .timeline::before {
-    right: 0.625rem;
+    right: 0.5625rem;
   }
 
   .timeline-marker {
-    right: -2.5rem;
+    right: -2.75rem;
     width: 2rem;
     height: 2rem;
   }
