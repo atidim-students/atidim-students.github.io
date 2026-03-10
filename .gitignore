@@ -13,6 +13,9 @@ desktop.ini
 node_modules/
 package-lock.json
 
+# Claude Code
+.claude/
+
 # Misc
 *.log
 *.tmp
