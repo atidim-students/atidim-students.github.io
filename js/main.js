@@ -47,6 +47,7 @@
   var header = document.getElementById('site-header');
   var sections = document.querySelectorAll('section[id], footer[id]');
   var navLinks = document.querySelectorAll('.nav-link');
+  var sectionLabel = document.getElementById('current-section-label');
   var ticking = false;
 
   function onScroll() {
@@ -66,11 +67,18 @@
       var scrollPos = window.scrollY + 100;
       var atBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 2);
 
+      // Clear label when at top (hero)
+      if (window.scrollY < 200 && sectionLabel) {
+        sectionLabel.textContent = '';
+      }
+
       if (atBottom) {
-        // At bottom of page, activate the last nav-linked section
         navLinks.forEach(function (link) { link.classList.remove('active'); });
         var lastLink = navLinks[navLinks.length - 1];
-        if (lastLink) lastLink.classList.add('active');
+        if (lastLink) {
+          lastLink.classList.add('active');
+          if (sectionLabel) sectionLabel.textContent = lastLink.textContent;
+        }
       } else {
         sections.forEach(function (section) {
           var top = section.offsetTop;
@@ -82,6 +90,7 @@
               link.classList.remove('active');
               if (link.getAttribute('href') === '#' + id) {
                 link.classList.add('active');
+                if (sectionLabel) sectionLabel.textContent = link.textContent;
               }
             });
           }

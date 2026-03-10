@@ -171,6 +171,24 @@ body {
   color: #1d4ed8;
 }
 
+/* Current section label (mobile only) */
+.current-section-label {
+  display: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--blue-royal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+}
+
+@media (max-width: 768px) {
+  .current-section-label {
+    display: block;
+  }
+}
+
 /* Mobile menu button */
 .mobile-menu-btn {
   display: none;
