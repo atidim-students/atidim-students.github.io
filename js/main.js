@@ -1,31 +1,4 @@
 // ============================================
-// Scroll Fade-In Animations
-// ============================================
-(function () {
-  var targets = document.querySelectorAll(
-    '.section-title, .section-intro, .section-subtitle, ' +
-    '.about-text, .pillars-grid, .benefit-cards-row, .general-instructions, ' +
-    '.institution-selector, .finance-card, .timeline-item, ' +
-    '.org-card, .contact-grid, .footer-title'
-  );
-
-  if (!targets.length || !('IntersectionObserver' in window)) return;
-
-  targets.forEach(function (el) { el.classList.add('fade-up'); });
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-  targets.forEach(function (el) { observer.observe(el); });
-})();
-
-// ============================================
 // Mobile Menu Toggle
 // ============================================
 (function () {
