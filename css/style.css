@@ -140,6 +140,12 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 2.25rem;
+  width: auto;
 }
 
 .logo-text {
@@ -320,7 +326,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(160deg, #0f2557 0%, var(--blue-deep) 30%, #1e40af 60%, var(--blue-royal) 100%);
+  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
   padding-top: var(--header-height);
   overflow: hidden;
 }
@@ -328,9 +334,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 75% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 45%),
-    radial-gradient(ellipse at 25% 30%, rgba(96, 165, 250, 0.15) 0%, transparent 45%);
+  background: linear-gradient(160deg, rgba(15, 37, 87, 0.85) 0%, rgba(30, 58, 138, 0.8) 40%, rgba(37, 99, 235, 0.75) 100%);
   pointer-events: none;
 }
 
