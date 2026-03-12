@@ -1131,9 +1131,6 @@ body {
     padding: 1rem 0.5rem;
   }
 
-  .contact-item:last-child {
-    grid-column: 1 / -1;
-  }
 }
 
 /* ============================================
