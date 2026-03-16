@@ -338,10 +338,9 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
-  background-color: #0F172A;
+  text-align: right;
+  background: url('../assets/images/hero-bg.jpg') left center/cover no-repeat;
+  background-color: #0a1628;
   padding-top: var(--header-height);
   overflow: hidden;
 }
@@ -349,7 +348,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 37, 87, 0.6) 50%, rgba(15, 37, 87, 0.4) 100%);
+  background: linear-gradient(to left, rgba(10, 22, 40, 0.15) 0%, rgba(10, 22, 40, 0.5) 40%, rgba(10, 22, 40, 0.85) 70%, rgba(10, 22, 40, 0.95) 100%);
   pointer-events: none;
 }
 
@@ -357,11 +356,22 @@ body {
   position: relative;
   z-index: 1;
   padding: 2rem 1rem;
+  max-width: 55%;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    min-height: 100vh;
+    background-position: 60% center;
+  }
   .hero-overlay {
-    background: rgba(15, 23, 42, 0.7);
+    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0.5) 45%, rgba(10, 22, 40, 0.75) 100%);
+  }
+  .hero-content {
+    max-width: 100%;
+    margin-right: 0;
   }
 }
 
