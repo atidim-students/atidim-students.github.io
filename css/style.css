@@ -340,7 +340,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../assets/images/hero-bg-new.jpg') center right/cover no-repeat;
   padding-top: var(--header-height);
   overflow: hidden;
 }
@@ -348,7 +348,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(15, 37, 87, 0.85) 0%, rgba(30, 58, 138, 0.8) 40%, rgba(37, 99, 235, 0.75) 100%);
+  background: linear-gradient(to left, rgba(15, 37, 87, 0.3) 0%, rgba(15, 37, 87, 0.7) 50%, rgba(15, 37, 87, 0.9) 100%);
   pointer-events: none;
 }
 
@@ -367,21 +367,19 @@ body {
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
 .hero-slogan {
-  font-size: clamp(1.125rem, 3vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
   font-weight: 300;
-}
-
-.hero-cta {
-  font-size: 1.125rem;
-  padding: 1rem 2.5rem;
-  box-shadow: 0 4px 20px rgba(194, 65, 12, 0.4);
-}
-
-.hero-cta:hover {
-  box-shadow: 0 6px 30px rgba(194, 65, 12, 0.5);
+  font-style: italic;
 }
 
 /* ============================================
@@ -480,10 +478,10 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.pillar-academic { background: var(--blue-ice); }
-.pillar-financial { background: var(--yellow-light); }
-.pillar-social { background: var(--orange-peach); }
-.pillar-service { background: #f0fdf4; }
+.pillar-academic { border: 2px solid var(--blue-royal); background: transparent; }
+.pillar-financial { border: 2px solid var(--yellow-mustard); background: transparent; }
+.pillar-social { border: 2px solid var(--orange-cta); background: transparent; }
+.pillar-contact { border: 2px solid var(--green-accent); background: transparent; }
 
 .pillar-icon {
   width: 3rem;
@@ -493,7 +491,7 @@ body {
 .pillar-academic .pillar-icon { color: var(--blue-royal); }
 .pillar-financial .pillar-icon { color: var(--yellow-mustard); }
 .pillar-social .pillar-icon { color: var(--orange-cta); }
-.pillar-service .pillar-icon { color: var(--green-accent); }
+.pillar-contact .pillar-icon { color: var(--green-accent); }
 
 .pillar-title {
   font-size: 1rem;
@@ -814,6 +812,11 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.badge-yellow {
+  background: #fbbf24;
+  color: #78350f;
+}
+
 .timeline-title {
   font-size: 1.125rem;
   font-weight: 700;
@@ -888,7 +891,7 @@ body {
 }
 
 .org-card-atidim {
-  background: var(--orange-peach);
+  background: transparent;
   border: 2px solid var(--orange-cta);
 }
 
