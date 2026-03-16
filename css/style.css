@@ -340,7 +340,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../assets/images/hero-bg.webp') center/cover no-repeat;
+  background: url('../assets/images/hero-desktop.webp') center/cover no-repeat;
   background-color: #01040f;
   padding-top: var(--header-height);
   overflow: hidden;
@@ -351,6 +351,12 @@ body {
   inset: 0;
   background: radial-gradient(ellipse at center, rgba(1, 4, 15, 0.45) 0%, rgba(1, 4, 15, 0.2) 50%, rgba(1, 4, 15, 0) 100%);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-image: url('../assets/images/hero-mobile.webp');
+  }
 }
 
 .hero-content {
