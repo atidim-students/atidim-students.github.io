@@ -1112,11 +1112,6 @@ body {
     padding: 3rem 0;
   }
 
-  .hero-cta {
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
-  }
-
   .finance-cards-grid {
     grid-template-columns: 1fr;
   }
