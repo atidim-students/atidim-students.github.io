@@ -338,17 +338,25 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  text-align: right;
-  background: url('../assets/images/hero-bg.jpg') left center/cover no-repeat;
+  justify-content: center;
+  text-align: center;
+  background: url('../assets/images/hero-desktop.webp') center/cover no-repeat;
   background-color: #0a1628;
   padding-top: var(--header-height);
   overflow: hidden;
 }
 
+/* JPEG fallback for browsers without WebP */
+@supports not (background-image: url('test.webp')) {
+  .hero-section {
+    background-image: url('../assets/images/hero-desktop.jpg');
+  }
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, rgba(10, 22, 40, 0.15) 0%, rgba(10, 22, 40, 0.5) 40%, rgba(10, 22, 40, 0.85) 70%, rgba(10, 22, 40, 0.95) 100%);
+  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.7) 60%, rgba(10, 22, 40, 0.85) 100%);
   pointer-events: none;
 }
 
@@ -356,22 +364,22 @@ body {
   position: relative;
   z-index: 1;
   padding: 2rem 1rem;
-  max-width: 55%;
-  margin-right: auto;
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    text-align: center;
-    min-height: 100vh;
-    background-position: 60% center;
+    background-image: url('../assets/images/hero-mobile.webp');
+    background-position: center 30%;
   }
+
+  @supports not (background-image: url('test.webp')) {
+    .hero-section {
+      background-image: url('../assets/images/hero-mobile.jpg');
+    }
+  }
+
   .hero-overlay {
-    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0.5) 45%, rgba(10, 22, 40, 0.75) 100%);
-  }
-  .hero-content {
-    max-width: 100%;
-    margin-right: 0;
+    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.4) 0%, rgba(10, 22, 40, 0.65) 40%, rgba(10, 22, 40, 0.85) 70%, rgba(10, 22, 40, 0.95) 100%);
   }
 }
 
