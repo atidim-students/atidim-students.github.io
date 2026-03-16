@@ -340,7 +340,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../assets/images/hero-desktop.webp') center/cover no-repeat;
+  background: url('../assets/images/hero-desktop.webp') center 40%/cover no-repeat;
   background-color: #0a1628;
   padding-top: var(--header-height);
   overflow: hidden;
@@ -349,7 +349,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.4) 0%, rgba(10, 22, 40, 0.15) 60%, rgba(10, 22, 40, 0) 100%);
+  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.3) 50%, rgba(10, 22, 40, 0.1) 100%);
   pointer-events: none;
 }
 
@@ -372,7 +372,7 @@ body {
   color: var(--white);
   margin-bottom: 1rem;
   line-height: 1.3;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(10, 22, 40, 0.4);
 }
 
 .hero-subtitle {
@@ -380,14 +380,16 @@ body {
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: 1rem;
   font-weight: 400;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(10, 22, 40, 0.3);
 }
 
 .hero-slogan {
   font-size: clamp(1rem, 2.5vw, 1.35rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0;
   font-weight: 300;
   font-style: italic;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(10, 22, 40, 0.3);
 }
 
 /* ============================================
