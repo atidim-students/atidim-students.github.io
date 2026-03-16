@@ -340,23 +340,16 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('../assets/images/hero-desktop.webp') center/cover no-repeat;
+  background: url('../assets/images/hero-desktop.webp') center bottom/contain no-repeat;
   background-color: #0a1628;
   padding-top: var(--header-height);
   overflow: hidden;
 }
 
-/* JPEG fallback for browsers without WebP */
-@supports not (background-image: url('test.webp')) {
-  .hero-section {
-    background-image: url('../assets/images/hero-desktop.jpg');
-  }
-}
-
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.7) 60%, rgba(10, 22, 40, 0.85) 100%);
+  background: radial-gradient(ellipse at center 60%, rgba(10, 22, 40, 0.5) 0%, rgba(10, 22, 40, 0.3) 40%, rgba(10, 22, 40, 0) 70%);
   pointer-events: none;
 }
 
@@ -368,18 +361,19 @@ body {
 
 @media (max-width: 768px) {
   .hero-section {
+    min-height: 100vh;
     background-image: url('../assets/images/hero-mobile.webp');
-    background-position: center 30%;
-  }
-
-  @supports not (background-image: url('test.webp')) {
-    .hero-section {
-      background-image: url('../assets/images/hero-mobile.jpg');
-    }
+    background-size: cover;
+    background-position: center top;
+    align-items: flex-end;
   }
 
   .hero-overlay {
-    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.4) 0%, rgba(10, 22, 40, 0.65) 40%, rgba(10, 22, 40, 0.85) 70%, rgba(10, 22, 40, 0.95) 100%);
+    background: linear-gradient(to bottom, rgba(10, 22, 40, 0.2) 0%, rgba(10, 22, 40, 0.5) 35%, rgba(10, 22, 40, 0.85) 55%, rgba(10, 22, 40, 0.95) 75%);
+  }
+
+  .hero-content {
+    padding-bottom: 3rem;
   }
 }
 
