@@ -349,7 +349,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.3) 50%, rgba(10, 22, 40, 0.1) 100%);
+  background: radial-gradient(ellipse at center, rgba(10, 22, 40, 0.35) 0%, rgba(10, 22, 40, 0.15) 50%, rgba(10, 22, 40, 0) 100%);
   pointer-events: none;
 }
 
@@ -362,7 +362,12 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 2rem 1rem;
+  padding: 2rem 2.5rem;
+  background: rgba(10, 22, 40, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  max-width: 36rem;
 }
 
 
