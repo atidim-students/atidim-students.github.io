@@ -515,6 +515,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  .pillars-grid .pillar-card:last-child {
+    grid-column: span 2;
+  }
 }
 
 /* ============================================
