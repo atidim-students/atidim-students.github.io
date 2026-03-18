@@ -942,11 +942,14 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Partner logos within cards */
+/* Partner logos within cards - styled like institution logos */
 .partner-logo {
-  max-height: 2.5rem;
+  max-height: 3rem;
+  max-width: 10rem;
   width: auto;
   object-fit: contain;
+  margin: 0.5rem 0 0.75rem;
+  display: block;
 }
 
 /* ============================================
