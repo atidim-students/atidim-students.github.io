@@ -1002,6 +1002,13 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.org-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 .org-card-header h3 {
   font-size: 1.375rem;
   font-weight: 800;
