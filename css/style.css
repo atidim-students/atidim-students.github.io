@@ -944,12 +944,17 @@ body {
 
 /* Card logos - replaces SVG icons, styled like institution logos */
 .card-logo {
-  max-height: 4rem;
+  max-height: 5.5rem;
   max-width: 14rem;
   width: auto;
   object-fit: contain;
   margin-bottom: 0.75rem;
   display: block;
+}
+
+/* Anieres logo is already large enough */
+.card-logo[alt="Anieres"] {
+  max-height: 4rem;
 }
 
 /* Titles need spacing when logo replaces the header wrapper */
