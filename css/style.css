@@ -465,9 +465,9 @@ body {
 
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 48rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 52rem;
   margin: 0 auto;
 }
 
@@ -502,6 +502,8 @@ body {
 .pillar-financial .pillar-icon { color: var(--yellow-mustard); }
 .pillar-social .pillar-icon { color: var(--orange-cta); }
 .pillar-contact .pillar-icon { color: var(--green-accent); }
+.pillar-service { border: 2px solid #7c3aed; background: transparent; }
+.pillar-service .pillar-icon { color: #7c3aed; }
 
 .pillar-title {
   font-size: 1rem;
@@ -713,6 +715,7 @@ body {
 .finance-card:nth-child(3) { border-top-color: var(--yellow-mustard); }
 .finance-card:nth-child(4) { border-top-color: var(--orange-cta); }
 .finance-card:nth-child(5) { border-top-color: #8b5cf6; }
+.finance-card:nth-child(6) { border-top-color: #ec4899; }
 
 .finance-card-header {
   display: flex;
@@ -872,6 +875,78 @@ body {
   .timeline-content {
     padding: 1.25rem 1.5rem;
   }
+}
+
+/* ============================================
+   Service Preparation Section
+   ============================================ */
+.service-section {
+  background: var(--white);
+}
+
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--border-light);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.service-card:nth-child(1) { border-top-color: #7c3aed; }
+.service-card:nth-child(2) { border-top-color: var(--blue-royal); }
+.service-card:nth-child(3) { border-top-color: var(--orange-cta); }
+.service-card:nth-child(4) { border-top-color: var(--green-accent); }
+.service-card:nth-child(5) { border-top-color: var(--yellow-mustard); }
+.service-card:nth-child(6) { border-top-color: var(--blue-deep); }
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  color: #7c3aed;
+}
+
+.service-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.service-card .btn {
+  margin-top: 0.5rem;
+}
+
+/* Partner logos within cards */
+.partner-logo {
+  max-height: 2.5rem;
+  width: auto;
+  object-fit: contain;
 }
 
 /* ============================================
