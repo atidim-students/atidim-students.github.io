@@ -942,14 +942,20 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Partner logos within cards - styled like institution logos */
-.partner-logo {
-  max-height: 3rem;
-  max-width: 10rem;
+/* Card logos - replaces SVG icons, styled like institution logos */
+.card-logo {
+  max-height: 4rem;
+  max-width: 14rem;
   width: auto;
   object-fit: contain;
-  margin: 0.5rem 0 0.75rem;
+  margin-bottom: 0.75rem;
   display: block;
+}
+
+/* Titles need spacing when logo replaces the header wrapper */
+.finance-card > .finance-card-title,
+.service-card > .service-card-title {
+  margin-bottom: 1.25rem;
 }
 
 /* ============================================
