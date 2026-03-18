@@ -942,11 +942,30 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Partner logos within cards */
+/* Partner logos at bottom of cards */
 .partner-logo {
+  display: block;
+  max-height: 1.75rem;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.5;
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  transition: opacity var(--transition);
+}
+
+.partner-logo:hover {
+  opacity: 0.85;
+}
+
+/* Org card header logos */
+.org-logo {
   max-height: 2.5rem;
   width: auto;
   object-fit: contain;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
 }
 
 /* ============================================
