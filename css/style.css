@@ -1009,6 +1009,10 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.org-logos .card-logo:first-child {
+  max-height: 3rem;
+}
+
 .org-card-header h3 {
   font-size: 1.375rem;
   font-weight: 800;
